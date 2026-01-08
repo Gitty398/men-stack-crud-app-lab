@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include("../partials/nav.ejs") %>
+        <h1>All Drones</h1>
+        <ul>
+            <% allDrones.map(drone=> { %>
+                <li>
+                    <%= drone.name %>
+
+                        <div>
+                            <img height=300px width=500px src="<%= drone.image %>" alt="<%=drone.name %>" />
+                        </div>
+                </li>
+
+                <% }) %>
+        </ul>
+</body>
+
+</html>
