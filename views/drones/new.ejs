@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a Drone</title>
-</head>
+<%- include("../partials/head.ejs", {title: "Welcome to the Drone Catalog" }) %>
 
-<body>
-    <%- include("../partials/nav.ejs") %>
-        <h1>Catalog a New Drone!</h1>
-        <form action="/drones" method="post">
+    <body>
+        <%- include("../partials/nav.ejs") %>
+            <h1>Catalog a New Drone!</h1>
+            <form action="/drones" method="post">
 
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
-            </div>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                </div>
 
-            <div>
-                <label for="category">Category:</label>
-                <select name="category" id="category">
-                    <option value="USV">USV</option>
-                    <option value="UAS">UAS</option>
-                    <option value="UUV">UUV</option>
-                    <option value="UGV">UGV</option>
-                </select>
-            </div>
+                <div>
+                    <label for="category">Category:</label>
+                    <select name="category" id="category">
+                        <option value="USV">USV</option>
+                        <option value="UAS">UAS</option>
+                        <option value="UUV">UUV</option>
+                        <option value="UGV">UGV</option>
+                    </select>
+                </div>
 
-            <div>
-                <label for="isCommercial">Is it Commercially Available?</label>
-                <input type="checkbox" name="isCommercial" id="isCommercial">
-            </div>
+                <div>
+                    <label for="isCommercial">Is it Commercially Available?</label>
+                    <input type="checkbox" name="isCommercial" id="isCommercial">
+                </div>
 
-            <div>
-                <label for="image">Enter an Image URL</label>
-                <input type="text" name="image" id="image" />
-            </div>
+                <div>
+                    <label for="image">Enter an Image URL</label>
+                    <input type="text" name="image" id="image" />
+                </div>
 
-            <div>
-                <button type="submit">Submit</button>
-            </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
 
-        </form>
-</body>
+            </form>
+    </body>
 
 </html>

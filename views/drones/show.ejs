@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs", {title: "Show" + drone.name }) %>
+
+    <body>
+        <%- include('../partials/nav.ejs') %>
+            <h1>
+                <%= drone.name %>
+            </h1>
+            <h3>
+                <%= drone.category%>
+            </h3>
+            <img height=300px width=500px src="<%= drone.image %>">
+            <% if (drone.isCommercial) { %>
+                <p>This drone is commercially available</p>
+                <%} else { %>
+                    <p> This drone is private</p>
+                    <% } %>
+
+                        <a href="/drones"><button>Go back to All Drones</button>
+
+                            <form action="/drones/<%= drone._id %>?_method=DELETE" method="POST">
+                                <button type=" submit">Delete this drone></button>
+                            </form>
+
+                            <a href="/drones/<%= drone._id%>/edit">
+                                <button>Edit this drone</button>
+    </body>
+
+</html>

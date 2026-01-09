@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drone App</title>
-</head>
+<%- include("./partials/head.ejs", {title: "Welcome to the Drone Catalog" }) %>
 
-<body>
-    <%- include("./partials/nav.ejs") %>
+    <body>
+        <%- include("./partials/nav.ejs") %>
 
-        <h1>Welcome to the Drone App</h1>
-        <p>An app for cataloging drones</p>
+            <h1>Welcome to the Drone App</h1>
+            <img class="drone-pic1"
+                src="https://imgs.search.brave.com/Wso8AgTiPxLGfeF-U3rgokeBcusEqUO9-1cY9Z-vROM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaW1z/LmFwbmV3cy5jb20v/ZGltczQvZGVmYXVs/dC81ODg5Zjc2LzIx/NDc0ODM2NDcvc3Ry/aXAvdHJ1ZS9jcm9w/Lzg2NDB4NTc2MCsw/KzAvcmVzaXplLzU5/OXgzOTkhL3F1YWxp/dHkvOTAvP3VybD1o/dHRwczovL2Fzc2V0/cy5hcG5ld3MuY29t/L2VmLzc0L2MxOGEz/OGZhNWU1M2I5OTE0/ZWU2YjA0ZDViOWIv/OGVmOTFhY2JlYjI0/NDRiMThlMTZlZTZi/NzI4MTUwMzE"
+                alt="a man building a drone in a workshop">
+            <p>An app for cataloging drones</p>
 
-</body>
+    </body>
 
 </html>

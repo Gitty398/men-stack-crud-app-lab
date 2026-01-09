@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs", {title: "Edit" + drone.name}) %>
+
+    <body>
+        <%- include("../partials/nav.ejs")%>
+            <h1>Edit the <%= drone.name %>
+            </h1>
+            <form action="/drones/<% drone._id%>?_method=PUT" method="post">
+
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="<%= drone.name %>">
+                </div>
+
+                <div>
+                    <label for="category">Category:</label>
+                    <select name="category" id="category" value="<%=drone.category%>">
+                        <option value="USV" <%=drone.category==="USV" ? "selected" : "" %>>USV </option>
+                        <option value="UAS" <%=drone.category==="UAS" ? "selected" : "" %>>UAS </option>
+                        <option value="UUV" <%=drone.category==="UUV" ? "selected" : "" %>>UUV </option>
+                        <option value="UGV" <%=drone.category==="UGV" ? "selected" : "" %>>UGV </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="image">Enter an Image URL</label>
+                    <input type="text" name="image" id="image" value="<%= drone.image%>">
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+
+    </body>
+
+</html>
