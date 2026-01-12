@@ -30,7 +30,7 @@ router.delete("/drones/:droneId", async (req, res) => {
 router.put("/drones/:droneId", async (req, res) => {
     req.body.isCommercial = req.body.isCommercial === "on" ? true : false
     await Drone.findByIdAndUpdate(req.params.droneId, req.body)
-    res.redirect(`/fruits/${req.params.droneId}`);
+    res.redirect(`/drones/${req.params.droneId}`);
 })
 
 

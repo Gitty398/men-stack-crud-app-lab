@@ -7,7 +7,7 @@
         <%- include("../partials/nav.ejs")%>
             <h1>Edit the <%= drone.name %>
             </h1>
-            <form action="/drones/<% drone._id%>?_method=PUT" method="post">
+            <form action="/drones/<%= drone._id%>?_method=PUT" method="post">
 
                 <div>
                     <label for="name">Name:</label>
